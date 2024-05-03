@@ -17,7 +17,7 @@ const router = Router();
 router.get("/notes", getNotes);
 router.post("/notes", body("title").isString(), handleInputErrors, createNote);
 router.put(
-  "/note/:id",
+  "/notes/:id",
   body("status").isBoolean(),
   handleInputErrors,
   updateNote

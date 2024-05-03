@@ -18,8 +18,8 @@ app.get("/", (req, res, next) => {
 });
 
 app.use("/api", protect, router);
-app.get("/user/create", handleInputErrors, createNewUser);
-app.get("/user/signin", handleInputErrors, signIn);
+app.post("/user/create", handleInputErrors, createNewUser);
+app.post("/user/signin", handleInputErrors, signIn);
 
 app.use((err, req, res, next) => {
   if (err.type === "auth") {
