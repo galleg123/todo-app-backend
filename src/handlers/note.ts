@@ -50,7 +50,6 @@ export const updateNote = async (req, res, next) => {
         id: req.params.id,
       },
       data: {
-        title: req.body.title,
         status: req.body.status,
       },
     });
