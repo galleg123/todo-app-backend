@@ -29,6 +29,7 @@ export const signIn = async (req, res) => {
   if (!isValid) {
     res.status(401);
     res.send("Invalid Password");
+    return;
   }
 
   const token = createJWT(user);
